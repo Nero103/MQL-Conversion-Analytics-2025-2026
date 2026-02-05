@@ -20,7 +20,7 @@ To enhance the dataset and include the necessary account-level information, join
 
 Merged Accounts with Clean Steps: Joined account data to the cleaned steps dataset to ensure that the appropriate last dates for each funnel stage were correctly included.
 
-Filtered by Stages: The data was then filtered based on their respective stage data tables to ensure that each MQL could be tracked through the funnel stages (SAL → SQL → SQO → Won).
+Filtered by Stages: The data was then filtered based on their respective stage data tables to ensure that each MQL could be tracked through the funnel stages (Lead to Accepted to Qualified to Opportunity).
 
 ### 3. Funnel Data Preparation
 
