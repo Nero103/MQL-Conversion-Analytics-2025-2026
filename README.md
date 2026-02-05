@@ -1,59 +1,51 @@
-# MQL Conversion Tracker
+# MQL Conversion Tracker (Synthetic Demo Project)
 ## Overview
 
-This repository contains a MQL (Marketing Qualified Lead) Conversion Tracker, built using Tableau and Tableau Prep. The goal of this project is to track the movement of leads through the sales funnel from **Sales Accepted Lead (SAL)** to **Sales Qualified Lead (SQL)** **Sales Qualified Opportunity (SQO)** to **Won Opportunities**.
+This repository contains a synthetic B2B funnel analytics project built using **Tableau** and **Tableau Prep**. The purpose of this project is to demonstrate data preparation techniques and funnel visualization using mock datasets.
 
-The project utilizes Tableau Prep to combine and clean multiple datasets, filter leads and contacts, and merge them into a single dataset that enables detailed sales funnel analysis and reporting. The final dataset was used to build a Tableau dashboard that visualizes the MQL conversion process.
+All data in this repository is artificially generated for portfolio demonstration and does not represent any real organization.
+
+The project models how qualified leads can progress through multiple funnel stages and ultimately convert into closed opportunities.
 
 ## Data Pipeline Process
-### 1. Union of Lead MQLs and Contact MQLs
+### 1. Combining Lead Sources
 
-The first step in the data preparation process was to union the **Lead MQLs** and **Contact MQLs** into a complete set of data. This step was necessary to ensure that both leads and contacts were captured in the sales funnel, allowing for a complete count of MQLs.
+Multiple synthetic datasets representing inbound leads and contacts were cleaned and merged to form a unified lead dataset. This step demonstrates how Tableau Prep can be used to standardize fields and combine sources for funnel analysis.
 
-Filtered Leads and Contacts: Both leads and contacts were filtered based on business requirements to ensure that only relevant records were included.
+### 2. Funnel Stage Modeling
 
-Union Operation: The filtered leads and contacts datasets were unioned to form a combined set of MQLs.
+The unified dataset was segmented into generic funnel stages:
 
-### 2. Account Data Joins
+**Accepted Leads**
 
-To enhance the dataset and include the necessary account-level information, joins were used to merge the Account Table with the unified MQLs (Leads + Contacts) dataset. This step allowed for the inclusion of critical account-level attributes, including the last dates for each funnel stage.
+**Qualified Leads**
 
-Merged Accounts with Clean Steps: Joined account data to the cleaned steps dataset to ensure that the appropriate last dates for each funnel stage were correctly included.
+**Qualified Opportunities**
 
-Filtered by Stages: The data was then filtered based on their respective stage data tables to ensure that each MQL could be tracked through the funnel stages (Lead to Accepted to Qualified to Opportunity).
+**Closed Opportunities**
 
-### 3. Funnel Data Preparation
+Each stage was processed independently before being recombined into a single funnel dataset.
 
-After filtering and joining the data, the next step was to isolate the four funnel categories into their own datasets. These categories were:
+### 3. Funnel Consolidation
 
-**Sales Accepted Leads (SAL)**
+All funnel stages were unioned into one consolidated dataset to support time-based conversion analysis and visualization.
 
-**Sales Qualified Leads (SQL)**
+## Final Output
 
-**Sales Qualified Opportunities (SQO)**
+The final dataset was used to build a Tableau dashboard illustrating lead progression across funnel stages and highlighting conversion trends over time.
 
-**Won Opportunities**
+Technologies Used
 
-Union of Funnel Datasets: These isolated datasets were unioned into a single dataset, which was then unioned again with the Lead + Contact MQLs dataset. This final union ensured that we had a comprehensive funnel dataset for analysis.
+**Tableau Prep** – data cleaning, unions, and transformations
 
-### 4. Final Output
+**Tableau** – dashboard creation and visualization
 
-The final output was a unified funnel dataset containing all the necessary stages for the sales funnel analysis. This dataset was used to create the Tableau view, which visualized the MQL conversion process, showing the movement of MQLs from creation to won opportunities.
+**SQL** – exploratory data preparation
 
-## Technologies Used
+## Confidentiality Notice
 
-**Tableau Prep:** For data cleaning, filtering, union, and joins to create a unified dataset.
-
-**Tableau:** For creating the final dashboard and visualizing the MQL conversion funnel.
-
-**SQL:** For querying and manipulating the data prior to using Tableau Prep.
-
-## Files in this Repository
-
-Tableau Prep Flow File: Contains the step-by-step flow used to clean, union, and join datasets.
-
-Tableau Workbook: Contains the final view/dashboard displaying the MQL funnel and conversion rates.
+All datasets and workflows in this repository are synthetic and created solely for portfolio demonstration purposes. No proprietary, confidential, or employer-derived information is included. Metrics and values do not represent any real organization.
 
 ## Conclusion
 
-This project demonstrates the power of Tableau Prep for data preparation and sales funnel analysis. By unioning and cleaning data from different sources (leads, contacts, accounts), we created a consolidated dataset that allowed us to track and analyze MQLs as they progress through the sales pipeline. The final visualization in Tableau provides clear insights into the efficiency of each stage in the funnel, driving data-informed decisions for optimizing lead qualification and sales performance.
+This project demonstrates practical techniques for building funnel analytics using Tableau Prep and Tableau, including data consolidation, stage modeling, and visualization of conversion performance.
