@@ -124,7 +124,7 @@ The final dataset was published to Tableau and used to create an interactive das
 
 The final dataset was used to build a Tableau dashboard illustrating lead progression across funnel stages and highlighting conversion trends over time.
 
-<img width="640" height="480" alt="mql_barchart" src="https://github.com/user-attachments/assets/a5d3d8a7-d4ff-4765-9614-27ebd80a10b1" />
+<img width="999" height="799" alt="Dashboard 2" src="https://github.com/user-attachments/assets/f7826083-a8f9-4dfc-adff-c00860654b15" />
 
 Technologies Used
 
